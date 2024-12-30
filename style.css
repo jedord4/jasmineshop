@@ -1,0 +1,109 @@
+body {
+    background-image: url(pexels-joshsorenson-995300.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #000, #555);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav a:hover::after {
+    width: 100%;
+}
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+.services, .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.service-item, .gallery-item {
+    flex: 1 1 calc(30% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-item:hover, .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.service-item {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.gallery-item img {
+    width: 100%;
+    display: block;
+    height: 200px;
+    object-fit:contain;
+}
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+.cta {
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.cta:hover {
+    transform: scale(1.05);
+}
